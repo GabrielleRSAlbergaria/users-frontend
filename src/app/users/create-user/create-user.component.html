@@ -1,0 +1,45 @@
+<h2>Criar Usuário</h2>
+
+<div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id = "username" name="username" [(ngModel)]="request.username">
+    </div>
+    
+    <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" required [(ngModel)]="request.password">
+    </div>
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="request.name">
+    </div>
+
+    <div>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" [(ngModel)]="request.surname">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" [(ngModel)]="request.email">
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" data-mask="(00) 00000-0000" data-mask-selectonfocus="true"
+        [(ngModel)]="request.phone">
+    </div>
+    
+   <button (click) = "save()">Criar</button>
+
+   <br><br>
+   <div *ngIf="response">
+        <label for="username">Username: {{response.user.username}}</label>
+        <label for="name">Name:{{response.user.name}}</label>
+        <label for="surname">Surname: {{response.user.surname}}</label>
+        <label for="email">Email: {{response.user.email}}</label>
+        <label for="phone">Phone: {{response.user.phone}}</label>
+        <label for="Register Date">Register Date: {{response.user.register_date}}</label>
+        <label for="Enable">Phone: {{response.user.phone}}</label>
+   </div>
+</div>

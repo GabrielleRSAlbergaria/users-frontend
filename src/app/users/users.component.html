@@ -1,0 +1,31 @@
+<h1>Usuários</h1>
+
+<table *ngIf = "responseUsers">
+    <thead>
+        <td>Username</td>
+        <td>Password</td>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>Email</td>
+        <td>Phone</td>
+        <td>Enabled</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of responseUsers.users">
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.is_enabled}}</td>
+            <td><a routerLink = "/users/update/email/{{user.email}}">Edit</a></td>
+            <td><a routerLink = "/users/delete/email/{{user.email}}">Delete</a></td>
+
+        </tr>
+    </tbody>
+</table>
+
+

@@ -1,0 +1,24 @@
+<h2>Atualizar Usuário</h2>
+
+<div>
+ 
+    <div **ngIf="request">
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" required [(ngModel)]="request.password">
+    </div>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="request.name">
+    </div>
+    <div>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" [(ngModel)]="request.surname">
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" data-mask="(00) 00000-0000" data-mask-selectonfocus="true"
+        [(ngModel)]="request.phone">
+    </div>
+    
+   <button (click) = "update()">Atualizar</button>
+</div>

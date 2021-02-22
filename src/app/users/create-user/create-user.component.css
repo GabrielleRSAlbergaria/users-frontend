@@ -1,0 +1,9 @@
+label {
+    display: block;
+    font: .9rem 'Fira Sans', sans-serif;
+}
+
+button,
+label {
+    margin-top: 1rem;
+}
